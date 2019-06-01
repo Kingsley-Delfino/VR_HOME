@@ -77,15 +77,15 @@ public class HomeActivity extends AppCompatActivity {
         List<Member> memberList = new ArrayList<>();
         memberList.add(new Member(92, "I-100.jpg", "James"));
         memberList.add(new Member(103, "I-100.jpg", "David"));
-        memberList.add(new Member(234, "I-100.png", "Jerry"));
+        memberList.add(new Member(234, "I-100.jpg", "Jerry"));
         memberList.add(new Member(35, "I-100.jpg", "Maggie"));
         memberList.add(new Member(23, "I-100.jpg", "John"));
-        memberList.add(new Member(75, "I-100.png", "Jack"));
+        memberList.add(new Member(75, "I-100.jpg", "Jack"));
         memberList.add(new Member(65, "I-100.jpg", "Mark"));
-        memberList.add(new Member(12, "I-100.png", "Ben"));
-        memberList.add(new Member(45, "I-100.png", "Ken"));
+        memberList.add(new Member(12, "I-100.jpg", "Ben"));
+        memberList.add(new Member(45, "I-100.jpg", "Ken"));
         memberList.add(new Member(78, "I-100.jpg", "Ron"));
-        memberList.add(new Member(57, "I-100.png", "Sue"));
+        memberList.add(new Member(57, "I-100.jpg", "Sue"));
         recyclerView.setAdapter(new MemberAdapter(this, memberList));
     }
 
