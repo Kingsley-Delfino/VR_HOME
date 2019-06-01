@@ -111,7 +111,7 @@ public class CollectionActivity extends AppCompatActivity {
             return name;
         }
     }
-    private class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder> {
+    public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder> {
         private Context context;
         private LayoutInflater layoutInflater;
         private List<Member> memberList;
