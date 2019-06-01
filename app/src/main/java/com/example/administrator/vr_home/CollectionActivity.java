@@ -4,13 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,13 +19,14 @@ import java.util.List;
 
 import com.bumptech.glide.Glide;
 
-public class HomeActivity extends AppCompatActivity {
+public class CollectionActivity extends AppCompatActivity {
     ImageView imageView2;
     LinearLayout home, collection, personal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_collection);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
         imageView2 = (ImageView) findViewById(R.id.imageView2);
@@ -41,39 +41,39 @@ public class HomeActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent =new Intent(HomeActivity.this,SearchActivity.class);
+                Intent intent =new Intent(CollectionActivity.this,SearchActivity.class);
                 startActivity(intent);
-                HomeActivity.this.overridePendingTransition(0, 0);
+                CollectionActivity.this.overridePendingTransition(0, 0);
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent =new Intent(HomeActivity.this,HomeActivity.class);
+                Intent intent =new Intent(CollectionActivity.this,HomeActivity.class);
                 startActivity(intent);
-                HomeActivity.this.overridePendingTransition(0, 0);
+                CollectionActivity.this.overridePendingTransition(0, 0);
             }
         });
         collection.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent =new Intent(HomeActivity.this,CollectionActivity.class);
+                Intent intent =new Intent(CollectionActivity.this,CollectionActivity.class);
                 startActivity(intent);
-                HomeActivity.this.overridePendingTransition(0, 0);
+                CollectionActivity.this.overridePendingTransition(0, 0);
             }
         });
         personal.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent =new Intent(HomeActivity.this,PersonalActivity.class);
+                Intent intent =new Intent(CollectionActivity.this,PersonalActivity.class);
                 startActivity(intent);
-                HomeActivity.this.overridePendingTransition(0, 0);
+                CollectionActivity.this.overridePendingTransition(0, 0);
             }
         });
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,1));
         List<Member> memberList = new ArrayList<>();
         memberList.add(new Member(92, "I-100.jpg", "James"));
         memberList.add(new Member(103, "I-100.jpg", "David"));
@@ -143,7 +143,7 @@ public class HomeActivity extends AppCompatActivity {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-            View itemView = layoutInflater.inflate(R.layout.staggered_grid_layout_manager, viewGroup, false);
+            View itemView = layoutInflater.inflate(R.layout.grid_layout_manager, viewGroup, false);
             return new ViewHolder(itemView);
         }
 
@@ -156,7 +156,7 @@ public class HomeActivity extends AppCompatActivity {
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent =new Intent(HomeActivity.this,ChooseActivity.class);
+                    Intent intent =new Intent(CollectionActivity.this,ChooseActivity.class);
                     startActivity(intent);
                 }
             });

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".CollectionActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="VR_HOME"
+            android:text="我的收藏"
             android:textColor="#FF8C00"
             android:textSize="20dp" />
 
@@ -89,7 +89,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="VR_HOME"
-                android:textColor="#FF8C00" />
+                android:textColor="#808080" />
 
         </LinearLayout>
 
@@ -115,7 +115,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="我的收藏"
-                android:textColor="#808080" />
+                android:textColor="#FF8C00" />
 
         </LinearLayout>
 
