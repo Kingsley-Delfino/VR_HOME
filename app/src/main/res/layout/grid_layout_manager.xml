@@ -53,11 +53,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="ID：" />
+                        android:text="小区ID：" />
 
                     <TextView
                         android:id="@+id/tvId"
                         android:layout_width="wrap_content"
+                        android:textColor="#FF8C00"
                         android:layout_height="match_parent" />
 
                 </LinearLayout>
@@ -74,11 +75,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="姓名：" />
+                        android:text="公寓ID：" />
 
                     <TextView
                         android:id="@+id/tvName"
                         android:layout_width="wrap_content"
+                        android:textColor="#FF8C00"
                         android:layout_height="match_parent" />
                 </LinearLayout>
 

@@ -75,28 +75,24 @@ public class HomeActivity extends AppCompatActivity {
         });
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         List<Member> memberList = new ArrayList<>();
-        memberList.add(new Member(92, "I-100.jpg", "James"));
-        memberList.add(new Member(103, "I-100.jpg", "David"));
-        memberList.add(new Member(234, "I-100.jpg", "Jerry"));
-        memberList.add(new Member(35, "I-100.jpg", "Maggie"));
-        memberList.add(new Member(23, "I-100.jpg", "John"));
-        memberList.add(new Member(75, "I-100.jpg", "Jack"));
-        memberList.add(new Member(65, "I-100.jpg", "Mark"));
-        memberList.add(new Member(12, "I-100.jpg", "Ben"));
-        memberList.add(new Member(45, "I-100.jpg", "Ken"));
-        memberList.add(new Member(78, "I-100.jpg", "Ron"));
-        memberList.add(new Member(57, "I-100.jpg", "Sue"));
+        memberList.add(new Member(137, "apartment1.png", 198));
+        memberList.add(new Member(103, "apartment2.png", 234));
+        memberList.add(new Member(234, "apartment3.png", 209));
+        memberList.add(new Member(305, "apartment4.png", 121));
+        memberList.add(new Member(203, "apartment5.png", 690));
+        memberList.add(new Member(785, "apartment6.png", 190));
+        memberList.add(new Member(615, "apartment7.png", 764));
         recyclerView.setAdapter(new MemberAdapter(this, memberList));
     }
 
     public class Member{
         int id;
         String image;
-        String name;
-        public Member(int id, String image, String name){
+        int aid;
+        public Member(int id, String image, int aid){
             this.id=id;
             this.image=image;
-            this.name=name;
+            this.aid=aid;
         }
 
         public int getId() {
@@ -107,8 +103,8 @@ public class HomeActivity extends AppCompatActivity {
             return image;
         }
 
-        public String getName() {
-            return name;
+        public int getAid() {
+            return aid;
         }
     }
     private class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder> {
@@ -152,7 +148,7 @@ public class HomeActivity extends AppCompatActivity {
             final Member member = memberList.get(position);
             Glide.with(context).load("file:///android_asset/" + member.getImage()).into(viewHolder.ivImage);
             viewHolder.tvId.setText(String.valueOf(member.getId()));
-            viewHolder.tvName.setText(member.getName());
+            viewHolder.tvName.setText(member.getAid());
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

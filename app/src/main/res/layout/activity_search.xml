@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="clip_horizontal"
             android:layout_weight="1"
-            app:srcCompat="@drawable/pic4" />
+            app:srcCompat="@drawable/logo9" />
 
         <SearchView
             android:layout_width="250dp"
@@ -38,6 +38,8 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#FF8C00"
+            android:textColor="#FFFFFF"
             android:text="搜索" />
 
     </LinearLayout>
