@@ -15,13 +15,10 @@ public class WelcomeActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_welcome);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent =new Intent(WelcomeActivity.this,LoginActivity.class);
-                startActivity(intent);
-                WelcomeActivity.this.overridePendingTransition(0, 0);
-            }
+        new Handler().postDelayed(() -> {
+            Intent intent =new Intent(WelcomeActivity.this,LoginActivity.class);
+            startActivity(intent);
+            WelcomeActivity.this.overridePendingTransition(0, 0);
         },3000);
     }
 }

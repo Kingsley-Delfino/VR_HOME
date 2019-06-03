@@ -24,17 +24,19 @@
             android:layout_height="match_parent"
             android:layout_gravity="clip_horizontal"
             android:layout_weight="1"
-            app:srcCompat="@drawable/logo9" />
+            app:srcCompat="@drawable/logo9"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="260dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#FF8C00"
             android:gravity="center"
-            android:text="VR_HOME" />
+            android:text="VR_HOME"
+            tools:ignore="HardcodedText" />
 
         <CheckBox
             android:id="@+id/checkBox2"
@@ -65,7 +67,8 @@
             android:background="#FFFFFF"
             android:orientation="horizontal"
             app:cardCornerRadius="10dp"
-            app:cardElevation="5dp">
+            app:cardElevation="5dp"
+            tools:ignore="InefficientWeight">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,7 +85,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        app:srcCompat="@drawable/apartment7" />
+                        app:srcCompat="@drawable/apartment7"
+                        tools:ignore="ContentDescription" />
 
                 </LinearLayout>
 
@@ -92,28 +96,32 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:gravity="left"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="NestedWeights">
 
                         <TextView
                             android:id="@+id/textView"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="小区ID：" />
+                            android:text="小区ID："
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/tvId"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="001"
-                            android:textColor="#FF8C00" />
+                            android:textColor="#FF8C00"
+                            tools:ignore="HardcodedText" />
 
                     </LinearLayout>
 
@@ -129,14 +137,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="公寓ID：" />
+                            android:text="公寓ID："
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/tvName"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="137"
-                            android:textColor="#FF8C00" />
+                            android:textColor="#FF8C00"
+                            tools:ignore="HardcodedText" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -155,7 +165,8 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DisableBaselineAlignment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -172,7 +183,8 @@
                 android:background="#FFFFFF"
                 android:orientation="vertical"
                 app:cardCornerRadius="7dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                tools:ignore="NestedWeights">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -189,7 +201,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/i100"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -199,28 +212,32 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:ignore="RtlHardcoded">
 
                             <TextView
                                 android:id="@+id/textView1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="客厅"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -236,14 +253,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="032"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -277,7 +296,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/b04"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -287,28 +307,32 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
 
                             <TextView
                                 android:id="@+id/textView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="主卧"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -324,14 +348,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="060"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -365,7 +391,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/h03"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -375,28 +402,32 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
 
                             <TextView
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="阳台"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -412,14 +443,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="247"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -443,7 +476,8 @@
                 android:background="#FFFFFF"
                 android:orientation="vertical"
                 app:cardCornerRadius="7dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                tools:ignore="NestedWeights">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -460,7 +494,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/i63"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -470,7 +505,8 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -484,14 +520,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="厨房"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -507,14 +545,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="695"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -548,7 +588,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/c18"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -558,28 +599,32 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
 
                             <TextView
                                 android:id="@+id/textView5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="次卧"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -595,14 +640,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="090"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -636,7 +683,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/j12"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -646,28 +694,32 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded,TooManyViews">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
 
                             <TextView
                                 android:id="@+id/textView6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="储物间"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -683,14 +735,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="008"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -714,7 +768,8 @@
                 android:background="#FFFFFF"
                 android:orientation="vertical"
                 app:cardCornerRadius="7dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                tools:ignore="NestedWeights">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -731,7 +786,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/s04"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -741,7 +797,8 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -755,14 +812,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="洗手间"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -778,14 +837,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="659"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -819,7 +880,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/c24"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -829,28 +891,32 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
 
                             <TextView
                                 android:id="@+id/textView8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="客卧"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -866,14 +932,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="071"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -906,7 +974,9 @@
                             android:id="@+id/ivImage9"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:adjustViewBounds="true" />
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/o03"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -916,28 +986,32 @@
                         android:layout_margin="4dp"
                         android:layout_weight="1"
                         android:gravity="left"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight,RtlHardcoded">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
 
                             <TextView
                                 android:id="@+id/textView9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="名称：" />
+                                android:text="名称："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvId9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="其它"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -953,14 +1027,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="ID：" />
+                                android:text="ID："
+                                tools:ignore="HardcodedText" />
 
                             <TextView
                                 android:id="@+id/tvName9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="023"
-                                android:textColor="#FF8C00" />
+                                android:textColor="#FF8C00"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
 
                     </LinearLayout>

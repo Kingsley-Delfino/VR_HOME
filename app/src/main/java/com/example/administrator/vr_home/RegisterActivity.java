@@ -37,12 +37,9 @@ public class RegisterActivity extends AppCompatActivity {
         editText5 = (EditText) findViewById(R.id.editText5);
 
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(RegisterActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
+        button2.setOnClickListener(v -> {
+            Intent intent =new Intent(RegisterActivity.this,LoginActivity.class);
+            startActivity(intent);
         });
     }
 }

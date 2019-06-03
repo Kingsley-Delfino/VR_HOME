@@ -15,10 +15,11 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="16dp"
         android:text="我已阅读并同意 《用户服务协议》"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded" />
 
     <TextView
         android:id="@+id/textView5"
@@ -30,7 +31,7 @@
         android:layout_marginEnd="82dp"
         android:layout_marginRight="82dp"
         android:text="请输入手机号码进行登陆"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -45,7 +46,7 @@
         android:layout_marginEnd="146dp"
         android:layout_marginRight="146dp"
         android:text="VR_HOME"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -69,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="账号：" />
 
         <EditText
@@ -78,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:inputType="phone" />
     </LinearLayout>
 
@@ -100,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="密码：" />
 
         <EditText
@@ -109,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:inputType="numberPassword" />
     </LinearLayout>
 
@@ -129,12 +130,12 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#FF8C00"
             android:textColor="#FFFFFF"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="登陆" />
     </LinearLayout>
 
@@ -146,9 +147,10 @@
         android:layout_marginRight="30dp"
         android:textColor="#FF8C00"
         android:text="忘记密码？"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        tools:ignore="RtlHardcoded" />
 
     <TextView
         android:id="@+id/textView7"
@@ -161,7 +163,7 @@
         android:layout_marginRight="150dp"
         android:textColor="#FF8C00"
         android:text="新用户？"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />

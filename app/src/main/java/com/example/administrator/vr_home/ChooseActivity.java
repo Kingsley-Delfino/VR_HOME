@@ -5,14 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageView;
 
 public class ChooseActivity extends AppCompatActivity {
     CardView cardView, cardView1, cardView2, cardView3, cardView4, cardView5, cardView6, cardView7, cardView8, cardView9;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
 
+        imageView = (ImageView) findViewById(R.id.imageView);
         cardView = (CardView) findViewById(R.id.cardView);
         cardView1 = (CardView) findViewById(R.id.cardView1);
         cardView2 = (CardView) findViewById(R.id.cardView2);
@@ -23,6 +26,7 @@ public class ChooseActivity extends AppCompatActivity {
         cardView7 = (CardView) findViewById(R.id.cardView7);
         cardView8 = (CardView) findViewById(R.id.cardView8);
         cardView9 = (CardView) findViewById(R.id.cardView9);
+        imageView.setClickable(true);
         cardView.setClickable(true);
         cardView1.setClickable(true);
         cardView2.setClickable(true);
@@ -33,85 +37,49 @@ public class ChooseActivity extends AppCompatActivity {
         cardView7.setClickable(true);
         cardView8.setClickable(true);
         cardView9.setClickable(true);
-        cardView.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        imageView.setOnClickListener(arg0 -> {
+            onPause();
         });
-        cardView1.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView1.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView3.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView2.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView4.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView3.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView5.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView4.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView6.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView5.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView7.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView6.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView8.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView7.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
-        cardView9.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
-                startActivity(intent);
-            }
+        cardView8.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
+        });
+        cardView9.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);
+            startActivity(intent);
         });
     }
 }

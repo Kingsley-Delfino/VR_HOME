@@ -3,6 +3,7 @@ package com.example.administrator.vr_home;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,10 +21,16 @@ import java.util.List;
 import com.bumptech.glide.Glide;
 
     public class SearchActivity extends AppCompatActivity {
+        ImageView imageView1;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_search);
+            imageView1 = (ImageView) findViewById(R.id.imageView1);
+            imageView1.setClickable(true);
+            imageView1.setOnClickListener(arg0 -> {
+                onPause();
+            });
             RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
             recyclerView.setLayoutManager(new GridLayoutManager(this,1));
@@ -42,7 +49,7 @@ import com.bumptech.glide.Glide;
             int id;
             String image;
             int aid;
-            public Member(int id, String image, int aid){
+            Member(int id, String image, int aid){
                 this.id=id;
                 this.image=image;
                 this.aid=aid;
@@ -56,7 +63,7 @@ import com.bumptech.glide.Glide;
                 return image;
             }
 
-            public int getAid() {
+            int getAid() {
                 return aid;
             }
         }
@@ -65,18 +72,18 @@ import com.bumptech.glide.Glide;
             private LayoutInflater layoutInflater;
             private List<Member> memberList;
 
-            public MemberAdapter(Context context, List<Member> memberList) {
+            MemberAdapter(Context context, List<Member> memberList) {
                 this.context = context;
                 layoutInflater = LayoutInflater.from(context);
                 this.memberList = memberList;
             }
 
-            public class ViewHolder extends RecyclerView.ViewHolder {
+            class ViewHolder extends RecyclerView.ViewHolder {
                 ImageView ivImage;
                 TextView tvId, tvName;
                 View itemView;
 
-                public ViewHolder(View itemView) {
+                ViewHolder(View itemView) {
                     super(itemView);
                     this.itemView = itemView;
                     ivImage = (ImageView) itemView.findViewById(R.id.ivImage);
@@ -90,24 +97,22 @@ import com.bumptech.glide.Glide;
                 return memberList.size();
             }
 
+            @NonNull
             @Override
-            public MemberAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+            public MemberAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
                 View itemView = layoutInflater.inflate(R.layout.grid_layout_manager, viewGroup, false);
                 return new MemberAdapter.ViewHolder(itemView);
             }
 
             @Override
-            public void onBindViewHolder(MemberAdapter.ViewHolder viewHolder, final int position) {
+            public void onBindViewHolder(@NonNull MemberAdapter.ViewHolder viewHolder, final int position) {
                 final Member member = memberList.get(position);
                 Glide.with(context).load("file:///android_asset/" + member.getImage()).into(viewHolder.ivImage);
                 viewHolder.tvId.setText(String.valueOf(member.getId()));
-                viewHolder.tvName.setText(member.getAid());
-                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent =new Intent(SearchActivity.this,ShowActivity.class);
-                        startActivity(intent);
-                    }
+                viewHolder.tvName.setText(String.valueOf(member.getAid()));
+                viewHolder.itemView.setOnClickListener(v -> {
+                    Intent intent =new Intent(SearchActivity.this,ShowActivity.class);
+                    startActivity(intent);
                 });
             }
         }

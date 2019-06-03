@@ -3,6 +3,7 @@ package com.example.administrator.vr_home;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,41 +38,25 @@ public class CollectionActivity extends AppCompatActivity {
         home.setClickable(true);
         collection.setClickable(true);
         personal.setClickable(true);
-        imageView2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(CollectionActivity.this,SearchActivity.class);
-                startActivity(intent);
-                CollectionActivity.this.overridePendingTransition(0, 0);
-            }
+        imageView2.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(CollectionActivity.this,SearchActivity.class);
+            startActivity(intent);
+            CollectionActivity.this.overridePendingTransition(0, 0);
         });
-        home.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(CollectionActivity.this,HomeActivity.class);
-                startActivity(intent);
-                CollectionActivity.this.overridePendingTransition(0, 0);
-            }
+        home.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(CollectionActivity.this,HomeActivity.class);
+            startActivity(intent);
+            CollectionActivity.this.overridePendingTransition(0, 0);
         });
-        collection.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(CollectionActivity.this,CollectionActivity.class);
-                startActivity(intent);
-                CollectionActivity.this.overridePendingTransition(0, 0);
-            }
+        collection.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(CollectionActivity.this,CollectionActivity.class);
+            startActivity(intent);
+            CollectionActivity.this.overridePendingTransition(0, 0);
         });
-        personal.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent =new Intent(CollectionActivity.this,PersonalActivity.class);
-                startActivity(intent);
-                CollectionActivity.this.overridePendingTransition(0, 0);
-            }
+        personal.setOnClickListener(arg0 -> {
+            Intent intent =new Intent(CollectionActivity.this,PersonalActivity.class);
+            startActivity(intent);
+            CollectionActivity.this.overridePendingTransition(0, 0);
         });
         recyclerView.setLayoutManager(new GridLayoutManager(this,1));
         List<Member> memberList = new ArrayList<>();
@@ -89,7 +74,7 @@ public class CollectionActivity extends AppCompatActivity {
         int id;
         String image;
         int aid;
-        public Member(int id, String image, int aid){
+        Member(int id, String image, int aid){
             this.id=id;
             this.image=image;
             this.aid=aid;
@@ -103,7 +88,7 @@ public class CollectionActivity extends AppCompatActivity {
             return image;
         }
 
-        public int getAid() {
+        int getAid() {
             return aid;
         }
     }
@@ -112,18 +97,18 @@ public class CollectionActivity extends AppCompatActivity {
         private LayoutInflater layoutInflater;
         private List<Member> memberList;
 
-        public MemberAdapter(Context context, List<Member> memberList) {
+        MemberAdapter(Context context, List<Member> memberList) {
             this.context = context;
             layoutInflater = LayoutInflater.from(context);
             this.memberList = memberList;
         }
 
-        public class ViewHolder extends RecyclerView.ViewHolder {
+        class ViewHolder extends RecyclerView.ViewHolder {
             ImageView ivImage;
             TextView tvId, tvName;
             View itemView;
 
-            public ViewHolder(View itemView) {
+            ViewHolder(View itemView) {
                 super(itemView);
                 this.itemView = itemView;
                 ivImage = (ImageView) itemView.findViewById(R.id.ivImage);
@@ -137,18 +122,19 @@ public class CollectionActivity extends AppCompatActivity {
             return memberList.size();
         }
 
+        @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
             View itemView = layoutInflater.inflate(R.layout.grid_layout_manager, viewGroup, false);
             return new ViewHolder(itemView);
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+        public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
             final Member member = memberList.get(position);
             Glide.with(context).load("file:///android_asset/" + member.getImage()).into(viewHolder.ivImage);
             viewHolder.tvId.setText(String.valueOf(member.getId()));
-            viewHolder.tvName.setText(member.getAid());
+            viewHolder.tvName.setText(String.valueOf(member.getAid()));
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

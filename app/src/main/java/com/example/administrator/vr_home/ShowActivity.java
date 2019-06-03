@@ -1,5 +1,6 @@
 package com.example.administrator.vr_home;
 
+import android.annotation.SuppressLint;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -33,13 +34,13 @@ public class ShowActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class ImagerLoaderTask extends AsyncTask<Void,Void,Bitmap>{
         @Override
         protected Bitmap doInBackground(Void... params) {
             try {
                 InputStream inputStream = getAssets().open("I-100.jpg");
-                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                return bitmap;
+                return BitmapFactory.decodeStream(inputStream);
             } catch (IOException e) {
                 e.printStackTrace();
             }
