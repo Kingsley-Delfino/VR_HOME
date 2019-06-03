@@ -201,7 +201,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            app:srcCompat="@drawable/o03"
+                            app:srcCompat="@drawable/i100"
                             tools:ignore="ContentDescription" />
 
                     </LinearLayout>
@@ -494,7 +494,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            app:srcCompat="@drawable/o03"
+                            app:srcCompat="@drawable/i63"
                             tools:ignore="ContentDescription" />
 
                     </LinearLayout>

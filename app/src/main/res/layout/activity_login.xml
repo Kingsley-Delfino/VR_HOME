@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="HardcodedText,RtlHardcoded" />
 
     <TextView
         android:id="@+id/textView5"
@@ -34,7 +34,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView6"
@@ -49,7 +50,8 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -71,7 +73,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
-            android:text="账号：" />
+            android:text="账号："
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/editText1"
@@ -80,7 +83,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:textSize="20sp"
-            android:inputType="phone" />
+            android:inputType="phone"
+            tools:ignore="Autofill,LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -102,7 +106,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
-            android:text="密码：" />
+            android:text="密码："
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/editText2"
@@ -111,7 +116,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:textSize="20sp"
-            android:inputType="numberPassword" />
+            android:inputType="numberPassword"
+            tools:ignore="Autofill" />
     </LinearLayout>
 
     <LinearLayout
@@ -136,7 +142,8 @@
             android:background="#FF8C00"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:text="登陆" />
+            android:text="登陆"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <TextView
@@ -150,7 +157,7 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="HardcodedText,RtlHardcoded" />
 
     <TextView
         android:id="@+id/textView7"
@@ -166,6 +173,7 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        tools:ignore="HardcodedText" />
 
 </android.support.constraint.ConstraintLayout>

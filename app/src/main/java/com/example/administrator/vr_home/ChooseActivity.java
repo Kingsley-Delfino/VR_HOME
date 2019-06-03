@@ -39,7 +39,7 @@ public class ChooseActivity extends AppCompatActivity {
         cardView9.setClickable(true);
 
         imageView.setOnClickListener(arg0 -> {
-            onPause();
+            finish();
         });
         cardView.setOnClickListener(arg0 -> {
             Intent intent =new Intent(ChooseActivity.this,ShowActivity.class);

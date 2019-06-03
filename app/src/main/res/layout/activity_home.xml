@@ -24,7 +24,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="clip_horizontal"
             android:layout_weight="1"
-            app:srcCompat="@drawable/pic4" />
+            app:srcCompat="@drawable/pic4"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView1"
@@ -34,14 +35,16 @@
             android:gravity="center"
             android:text="VR_HOME"
             android:textColor="#FF8C00"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/logo8" />
+            app:srcCompat="@drawable/logo8"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 
@@ -65,7 +68,8 @@
         android:background="#FFFFFF"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DisableBaselineAlignment">
 
         <LinearLayout
             android:id="@+id/home"
@@ -80,7 +84,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/logo1" />
+                app:srcCompat="@drawable/logo1"
+                tools:ignore="ContentDescription,NestedWeights" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -90,7 +95,8 @@
                 android:textSize="12sp"
                 android:gravity="center_horizontal"
                 android:text="VR_HOME"
-                android:textColor="#FF8C00" />
+                android:textColor="#FF8C00"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -107,7 +113,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/logo5" />
+                app:srcCompat="@drawable/logo5"
+                tools:ignore="ContentDescription,NestedWeights" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -117,7 +124,8 @@
                 android:textSize="12sp"
                 android:gravity="center_horizontal"
                 android:text="我的收藏"
-                android:textColor="#808080" />
+                android:textColor="#808080"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -134,7 +142,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/logo6" />
+                app:srcCompat="@drawable/logo6"
+                tools:ignore="ContentDescription,NestedWeights" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -144,7 +153,8 @@
                 android:textSize="12sp"
                 android:gravity="center_horizontal"
                 android:text="关于我"
-                android:textColor="#808080" />
+                android:textColor="#808080"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 

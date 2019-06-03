@@ -29,7 +29,7 @@ import com.bumptech.glide.Glide;
             imageView1 = (ImageView) findViewById(R.id.imageView1);
             imageView1.setClickable(true);
             imageView1.setOnClickListener(arg0 -> {
-                onPause();
+                finish();
             });
             RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
